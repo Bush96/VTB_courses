@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+</head>
+<body>
+
+
+<div th:if="${products}">
+  <div th:if="${products.isEmpty()}">
+    <span>There is no products</span>
+  </div>
+
+  <div th:each="product : ${products}">
+    <p th:text="${product.getTitle()+product.getPrice()}">product</p>
+
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>
